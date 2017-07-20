@@ -9,7 +9,7 @@
 import { DeviceEventEmitter, NativeModules } from 'react-native';
 const { RNBluetoothState } = NativeModules;
 
-let subscribers = [];
+let subscribers =[];
 
 DeviceEventEmitter.addListener('centralManagerDidUpdateState', (...args) => {
   subscribers.forEach(subscriber => {
